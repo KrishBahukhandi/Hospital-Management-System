@@ -9,7 +9,7 @@ const App = () => {
   const toggleAuthPage = () => {
     setIsLogin(!isLogin);
   };
-
+  
   return (
   
     <div className="app-container">

@@ -17,30 +17,19 @@ const LoginPage = ({ onSwitch }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    let loginData;
-    if (formData.userType === "public") {
-      loginData = {
-        userType: formData.userType,
-        emailOrPhone: formData.emailOrPhone,
-        password: formData.password,
-      };
-    } else if (formData.userType === "staff") {
-      loginData = {
-        userType: formData.userType,
-        hospitalName: formData.hospitalName,
-        staffIDOrEmail: formData.emailOrPhone,
-        password: formData.password,
-      };
-    }
-
+  
+    const loginData = {
+      email: formData.emailOrPhone, // Assuming emailOrPhone is used for email here
+      password: formData.password,
+    };
+  
     try {
       const response = await fetch("http://localhost:5000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
       });
-
+  
       const result = await response.json();
       if (response.ok) {
         alert("Login successful!");
@@ -54,6 +43,7 @@ const LoginPage = ({ onSwitch }) => {
       alert("An error occurred. Please try again.");
     }
   };
+  
 
   return (
     <div className="auth-container animate-slide-in">
