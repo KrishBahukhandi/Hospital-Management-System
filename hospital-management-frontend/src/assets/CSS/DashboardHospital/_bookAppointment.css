@@ -1,0 +1,36 @@
+/* _bookAppointment.css */
+
+.book-appointment-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-appointment-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .book-appointment-form input,
+  .book-appointment-form select,
+  .book-appointment-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .book-appointment-form button {
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .book-appointment-form button:hover {
+    background-color: #1a5fb4;
+  }
+  

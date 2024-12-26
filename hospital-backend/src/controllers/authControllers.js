@@ -2,7 +2,7 @@ const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-// Register user
+
 const registerUser = async (req, res) => {
     try {
       const { name, email, phone, password, userType, hospitalName, staffID, role } = req.body;
@@ -34,12 +34,12 @@ const registerUser = async (req, res) => {
   };
   
 
-// Login user
+
 const loginUser = async (req, res) => {
     try {
       const { email, password } = req.body;
   
-      // Find the user by email
+      
       const user = await User.findOne({ email });
       if (!user) return res.status(404).json({ message: "User not found" });
   

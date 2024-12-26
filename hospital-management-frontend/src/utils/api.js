@@ -11,7 +11,7 @@ const makeRequest = async (endpoint, method, body = null) => {
     const data = await response.json();
     if (!response.ok) {
       throw new Error(data.message || "Request failed");
-    }
+    }2
     return data;
   } catch (error) {
     console.error(`Error in ${method} ${endpoint}:`, error.message);

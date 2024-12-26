@@ -1,0 +1,24 @@
+/* _notifications.css */
+
+.notifications {
+    margin-top: 20px;
+  }
+  
+  .notification-card {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-card h5 {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .notification-card p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

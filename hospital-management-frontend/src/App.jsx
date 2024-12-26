@@ -1,29 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import WelcomePage from './pages/WelcomePage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
-import './AuthStyles.css';
+import Dashboard from './pages/DashboardHospital';
 
 const App = () => {
-  const [isLogin, setIsLogin] = useState(true);
-
-  const toggleAuthPage = () => {
-    setIsLogin(!isLogin);
-  };
-  
   return (
-  
-    <div className="app-container">
-      {isLogin ? (
-        <div className="auth-page">
-          <LoginPage onSwitch={toggleAuthPage} />
-        </div>
-      ) : (
-        <div className="auth-page">
-          <SignupPage onSwitch={toggleAuthPage} />
-        </div>
-      )}
-    </div>
-    
+    <Router>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* Redirect to WelcomePage for unknown routes */}
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Router>
   );
 };
 
