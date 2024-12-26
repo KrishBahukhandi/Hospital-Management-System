@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import WelcomePage from './pages/WelcomePage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
-import Dashboard from './pages/DashboardHospital';
+// import Dashboard from './pages/DashboardHospital';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
+    
   );
 };
 
